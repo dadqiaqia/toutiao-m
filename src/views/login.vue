@@ -2,8 +2,8 @@
 
   <div class="login_container">
      <!-- 登陆页面顶部导航栏 -->
-    <van-nav-bar  title="登录"
-/>
+    <van-nav-bar @click-left="onClickLeft" left-arrow title="登录"
+></van-nav-bar>
  <!-- /登陆页面顶部导航栏 -->
 
  <!-- 手机号验证码及登录按钮表单 -->
@@ -109,7 +109,8 @@ export default {
           message: '登陆成功',
           forbidClick: true
 
-        })
+        },
+        this.$router.back())
         console.log('登录成功')
       } catch (err) {
         if (err.response.status === 400) {
@@ -125,6 +126,9 @@ export default {
           })
         }
       }
+    },
+    onClickLeft () {
+      this.$router.back()
     },
     async sedYZM () {
       // 1.校验手机号 2.进入倒计时 3.调用接口获取验证码
@@ -190,6 +194,8 @@ export default {
   font-size: 13px;
   margin: 380px auto;
   color: #666666;
+}.van-icon{
+  color: #fff;
 }
 
 </style>

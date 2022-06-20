@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <router-view/>
-<p> {{this.$store.state.count}}</p>
+<!-- <p> {{this.$store.state.count}}</p>
 <button @click="add">+1</button>
 <button @click="sub1">-1</button>
 <p>count的值是{{count}}</p>
-<button @click="subyb">+1异步加1</button>
+<button @click="subyb">+1异步加1</button> -->
   </div>
 </template>
 
