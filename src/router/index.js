@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/login', name: 'login', component: () => import('@/views/login.vue') },
+  { path: '/search', name: 'search', component: () => import('@/views/search/search-index.vue') },
   {
     path: '/',
     // name: 'layout',
@@ -14,7 +15,7 @@ const routes = [
       { path: '/my', name: 'my', component: () => import('@/views/my.vue') }
     ]
 
-  }
+  }, { path: '/article/:articleId', name: 'article', component: () => import('@/views/article/index.vue'), props: true }
 
 ]
 
